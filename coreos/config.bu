@@ -1,0 +1,23 @@
+variant: fcos
+version: 1.5.0
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys:
+        - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCryH8SlQ2Ms3N0w+UYnZp4KT5onDjE3HIsTLj0epwdZVNot4GknqB+FTqz6ncmuyGlsAEYYUY2ldjt1amZ22BXsGPq8uxGCketFpg3U/wCtl8hvsBIU22Qgx3AZbojjWnD1cf4nW46TjwwUmtrqf2FHCuDjCPTnXmOGV+GXpQw22plWqP4zEF/4h1YLH3/A+/42yxMFqzTP2nkRJHV6ijIP1Vgj+otP2CBGmCGqFsaoVCVKlKXAMW+BItrtrbdF/KeyDpELrDRJAR5ucXef8ccrNHEASSWh5DA5WKRs+kwWT9wbXmhTsJR7T3p99hM1an0V97hOhMoGtPwGpT5xizR
+                
+storage:
+  files:
+    - path: /etc/hostname
+      mode: 0644
+      contents:
+        inline: coreos-node1
+
+systemd:
+  units:
+    - name: docker.service
+      enabled: true
+
+    - name: automatic-updates.timer
+      enabled: true
+
