@@ -25,7 +25,7 @@ https://builds.coreos.fedoraproject.org/prod/streams/stable/builds/42.20250526.3
 
 
 ```
-ssh-keygen -t rsa -b 2048 -f ~/.ssh/core_id_rsa
+ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa
 ```
 
 
